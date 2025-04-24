@@ -1,0 +1,69 @@
+body {
+    border: 1px solid rgb(62, 62, 62);
+    margin-top: 30px;
+    max-width: 800px;
+    margin-inline: auto;
+    padding: 20px;
+    width: calc(100% - 70px); /* I got this code from chat gpt - 
+                                 https://chatgpt.com/share/68091f25-f564-8003-a96f-5fa74250025d
+                                 This is the only way I could find to keep a margin between the 
+                                 body and the edge once the window size gets smaller than the 
+                                 width of the body element */
+}
+
+* {
+    line-height: 25px;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 45px;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+h3 {
+    color: rgb(0, 110, 182);
+    margin-bottom: 0px;
+    font-weight: 100;
+    letter-spacing: 3px;
+}
+
+
+hr {
+    width: 75%;
+    margin-top: 0px;
+    margin-bottom: 40px;
+}
+
+p {
+    margin-inline: 20%;
+}
+
+ol {
+    margin-inline: 20%;
+    margin-bottom: 40px;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+img {
+    display: block;
+    width: 100px;
+    margin-inline: auto;
+}
+
+.spin {                         /* chatgpt wrote this .spin and @keyframes spin rulesets*/
+    animation: spin 1s ease;
+}
+  
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
