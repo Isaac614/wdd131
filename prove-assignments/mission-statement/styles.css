@@ -58,6 +58,21 @@ img {
     margin-inline: auto;
 }
 
+.dark {
+    background-color: #333;
+    border: 1px solid white;
+}
+
+.dark h1, .dark p, .dark li, .dark hr{
+    color: white;
+}
+
+.dark h3 {
+    color: #48b6ff;
+}
+
+
+
 .spin {                         /* chatgpt wrote this .spin and @keyframes spin rulesets*/
     animation: spin 1s ease;
 }
