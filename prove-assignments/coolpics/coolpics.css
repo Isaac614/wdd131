@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+:root {
+    --primary-color: #52489c;
+    --secondary-color: #59c3c3;
+    --accent-color: #f45b69;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica,sans-serif;
+    --secondary-font: Mooli, san-serif;
+}
+
+* {
+    font-family: var(--primary-font);
+    margin: 0 auto;
+}
+
+nav {
+    display: none;
+}
+
+nav a {
+    color: var(--text-light)
+}
+
+
+header {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    line-height: 2.5rem;
+    color: var(--text-light);
+}
+
+figure {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1, h2 {
+    text-align: center;
+    font-family: var(--secondary-font);
+}
+
+main h2 {
+    font-family: var(--primary-font);
+    margin-bottom: 20px;
+}
+
+button {
+    display: block;
+    font-family: var(--secondary-font);
+    background-color: var(--primary-color);
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-light)
+}
+
+main {
+    background-color: rgb(205, 205, 205);
+    padding: 20px;
+}
+
+a:visited {
+    color: var(--accent-color);
+}
+
+img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 5px 5px 5px;
+}
+
+footer {
+    background-color: var(--primary-color);
+    padding: 20px;
+    padding-left: 20%;
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+@media screen and (min-width: 600px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 800px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 950px;
+    }
+
+    button {
+        display: none;
+    }
+
+    nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+}
