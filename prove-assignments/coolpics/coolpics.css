@@ -55,6 +55,7 @@ button {
     color: var(--text-light)
 }
 
+
 main {
     background-color: rgb(205, 205, 205);
     padding: 20px;
@@ -101,6 +102,11 @@ footer {
     nav {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    nav a {
+        text-align: left;
+        display: inline;
     }
 
 }
