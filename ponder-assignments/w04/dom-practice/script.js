@@ -28,5 +28,7 @@ function manageTasks(e) {
 
 const submitButton = document.getElementById("submitTask");
 submitButton.addEventListener("click", newTask);
+const todoList = document.getElementById("todoList");
+todoList.addEventListener("click", manageTasks);
 // Add your event listeners here
 // We need to attach listeners to the submit button and the list. Listen for a click, call the 'newTask' function on submit and call the 'manageTasks' function if either of the icons are clicked in the list of tasks.
