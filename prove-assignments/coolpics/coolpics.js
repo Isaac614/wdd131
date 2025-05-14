@@ -1,3 +1,4 @@
+// Isaac Moore
 const menuButton = document.getElementById("menu-button");
 const nav = document.getElementById("nav");
 const navElements = document.querySelectorAll("nav a");
