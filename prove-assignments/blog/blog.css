@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #00435f;
+    --secondary-color: #189AB4;
+    --accent-color: #D4F1F4;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: "Roboto", Arial, sans-serif;
+    --secondary-font: "Oswald", Arial, sans-serif;
+}
+
+* {
+    font-family: var(--primary-font);
+}
+
+body { 
+    background-color: var(--accent-color);
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: var(--secondary-font);
+    text-align: center;
+    color: var(--primary-color);
+}
+
+header {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    align-items: center;
+    padding: 10px;
+    padding-right: 30px;
+    background-color: var(--primary-color);
+}
+
+nav {
+    display: inline-block;
+    justify-self: right;
+}
+
+nav a {
+    margin-inline: 1rem;
+    color: var(--text-light);
+}
+
+#body-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    margin-top: 30px;
+    width: 100%;
+}
+
+
+#body-grid div {
+    box-sizing: border-box;
+    width: 95%;
+}
+
+#book-info {
+    border-right: 2px solid var(--secondary-color);
+    padding-right: 20px;
+}
+
+#book-info p {
+    text-align: right;
+    font-size: 1.1rem;
+}
+
+#book h2 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+#book p {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0;
+    margin-top: 10px;
+    color: var(--primary-color);
+}
+
+#book img {
+    display: block;
+    margin-inline: auto;
+}
+
+#filter {
+    border: 2px solid var(--secondary-color);
+    padding: 15px;
+}
+
+#filter p {
+    margin: 0;
+}
+
+#filter h3 {
+    margin-bottom: 5px;
+}
+
+textarea {
+    display: block;
+    width: 90%;
+    margin-inline: auto;
+    border: 1px solid var(--secondary-color);
+}
+
+#book {
+    margin-inline: auto;
+}
+
+
+p {
+    font-family: var(--primary-font);
+}
+
