@@ -9,7 +9,7 @@ const articles = [
 		imgAlt: "Book cover for Septimus Heap 1",
 		ages: "10-14",
 		genre: "Fantasy",
-		stars: "****"
+		stars: "⭐⭐⭐⭐"
 	},
 	{
 		id: 2,
@@ -54,20 +54,6 @@ bookViewTemplate.innerHTML = `
 	<img src="" alt="book cover">
 	<p class="stars"></p>
 </div>
-
-<div class="filter">
-	<h3>Genre</h3>
-	<textarea></textarea>
-
-	<h3>Age Range</h3>
-	<textarea></textarea>
-
-	<h3>Reading Level</h3>
-	<textarea></textarea>
-
-	<h3>Rating</h3>
-	<textarea></textarea>
-</div>
 `;
 
 populateBooks();
@@ -100,11 +86,9 @@ function createBookView(bookInfo) {
 	const description = newBook.querySelector(".description");
 	description.innerText = bookInfo["description"];
 	
-	
 	const main = document.querySelector("main");
+
 	main.appendChild(newBook);
-
-
 }
 
 function populateBooks() {
