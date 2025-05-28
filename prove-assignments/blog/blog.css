@@ -43,35 +43,36 @@ nav a {
     color: var(--text-light);
 }
 
-#body-grid {
+.body-grid {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     margin-top: 30px;
+    margin-bottom: 100px;
     width: 100%;
 }
 
-
-#body-grid div {
+.body-grid div {
     box-sizing: border-box;
     width: 95%;
 }
 
-#book-info {
+.book-info {
     border-right: 2px solid var(--secondary-color);
     padding-right: 20px;
 }
 
-#book-info p {
+.book-info p {
     text-align: right;
     font-size: 1.1rem;
+    line-height: 1.5rem;
 }
 
-#book h2 {
+.book h2 {
     font-size: 3rem;
     margin: 0;
 }
 
-#book p {
+.book p {
     text-align: center;
     font-size: 2rem;
     margin: 0;
@@ -79,21 +80,37 @@ nav a {
     color: var(--primary-color);
 }
 
-#book img {
-    display: block;
-    margin-inline: auto;
+.book-info .date {
+    font-size: 1.3rem;
 }
 
-#filter {
+.book img {
+    display: block;
+    margin-inline: auto;
+    width: 75%;
+}
+
+input {
+    float: right;
+    margin: 10px;
+    padding: 15px;
+    width: 250px;
+    height: 30px;
+    font-family: var(--primary-font);
+    border-color: var(--secondary-color);
+    border-radius: 10px;
+}
+
+.filter {
     border: 2px solid var(--secondary-color);
     padding: 15px;
 }
 
-#filter p {
+.filter p {
     margin: 0;
 }
 
-#filter h3 {
+.filter h3 {
     margin-bottom: 5px;
 }
 
@@ -104,10 +121,9 @@ textarea {
     border: 1px solid var(--secondary-color);
 }
 
-#book {
+.book {
     margin-inline: auto;
 }
-
 
 p {
     font-family: var(--primary-font);
