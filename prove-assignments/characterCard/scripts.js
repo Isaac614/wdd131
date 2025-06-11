@@ -1,3 +1,4 @@
+// Isaac Moore
 const character = {
     name: "Snortleblat",
     class: "Swamp Beat Diplomat",
