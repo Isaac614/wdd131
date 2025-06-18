@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+:root {
+ --primary-color: #1B98E0;
+ --secondary-color: #59c3c3;
+ --text-dark: #333;
+ --text-light: #ebebeb;
+ --primary-font: Arial, Helvetica,sans-serif;
+ --secondary-font: "Amatic SC";
+ }
+
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    color: var(--text-dark);
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: "Patrick Hand"
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 2rem;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    gap: 10px;
+}
+
+.logo {
+    width: 80px;
+}
+
+
+
+
+.recipeContainer {
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.recipeImageContainer {
+    flex: 1 1;
+}
+
+.recipeImage {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.recipeTags {
+    margin-bottom: 20px;
+}
+
+.recipeTags p {
+    border: 2px solid black;
+    border-radius: 3px;
+    text-align: center;
+    display: inline-block;
+    padding: 5px;
+    font-size: 1.3rem;
+}
+
+.recipeContent {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.recipeTitle {
+    color: var(--primary-color);
+}
+
+.recipeDescription {
+    display: none;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+
+
+#flaitconAtt {
+    font-size: 0.6rem;
+    text-align: center;
+    display: block;
+    margin-top: 5px;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+}
+
+.social img {
+    width: 60px;
+    margin-inline: 10px;
+}
+
+@media (min-width: 550px) {
+    .recipeContainer {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    
+
+    .recipeContent {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 20px;
+    }
+    
+    .recipeDescription {
+        display: block;
+    }
+}
