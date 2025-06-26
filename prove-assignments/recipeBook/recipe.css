@@ -17,6 +17,11 @@
     color: var(--text-dark);
 }
 
+form {
+    margin: 0 auto;
+    text-align: center;
+}
+
 h1, h2, h3, h4, h5 {
     font-family: "Patrick Hand"
 }
@@ -70,6 +75,7 @@ header {
     display: inline-block;
     padding: 5px;
     font-size: 1.3rem;
+    margin: 5px;
 }
 
 .recipeContent {

@@ -281,3 +281,88 @@ const recipes = [
 ]
 
 
+init();
+
+document.querySelector("#searchForm").addEventListener("submit", function(event) {
+	event.preventDefault();
+	const input = document.querySelector("#recipeSearch");
+	const searchText = input.value;
+	const filteredRecipes = searchList(recipes, searchText);
+	renderRecipes(filteredRecipes);
+});
+
+
+
+function searchList(array, queryString) {
+	return array.filter(searchCallback);
+	function searchCallback(object) {
+		return (object.name.toLowerCase().includes(queryString.toLowerCase()) || 
+		object.description.toLowerCase().includes(queryString.toLowerCase()) || 
+		object.tags.find((element) => element.toLowerCase().includes(queryString.toLowerCase())) || 
+		object.recipeIngredient.find((element) => element.toLowerCase().includes(queryString.toLowerCase())));
+	}
+}
+
+
+
+function getRandomRecipe(recipes) {
+	return recipes[Math.floor(Math.random() * recipes.length)];
+}
+
+function createRecipeTemplate(recipe) {
+	return `<section class="recipeContainer">
+            <div class="recipeImageContainer">
+                <img alt="recipe image" class="recipeImage" src="${recipe.image}">
+            </div>
+            <div class="recipeContent">
+                <div class="recipeTags">
+					${createTagsTemplate(recipe.tags)}
+                </div>
+                <h2 class="recipeTitle">${recipe.name}</h2>
+                <span
+                    class="rating"
+                    role="img"
+                    aria-label="Rating: "
+                >
+                    ${createStarsTemplate(recipe.rating)}
+                </span>
+                <p class="recipeDescription">${recipe.description}</p>
+            </div>
+        </section>`;
+}
+
+function createTagsTemplate(tags) {
+	let tagsHtml = "";
+	tags.forEach((tag) => {
+		const tagString = `<p>${tag}</p>`
+		tagsHtml += (tagString);
+	});
+	return tagsHtml;
+}
+
+function createStarsTemplate(rating) {
+	let starsHtml = "";
+	for (let i = 0; i < 5; i++) {
+		if (i < rating) {
+			starsHtml += `<span aria-hidden="true" class="icon-star">⭐</span>`;
+		} else {
+			starsHtml += `<span aria-hidden="true" class="icon-star-empty">☆</span>`;
+		}
+	}
+	return starsHtml;
+}
+
+function renderRecipes(recipes) {
+	const mainElement = document.querySelector("#recipes");
+	mainElement.innerHTML = "";
+	recipes.forEach((recipe) => {
+		const recipeHtml = createRecipeTemplate(recipe);
+		mainElement.innerHTML += recipeHtml;
+	});
+}
+
+function init() {
+	const recipe = getRandomRecipe(recipes);
+	renderRecipes([recipe]);
+}
+
